@@ -29,7 +29,9 @@ export class DepartmentListComponent implements OnInit {
     if (event.target.value === 'Edit') {
       this.router.navigate(['department', item.id]);
     } else {
-      this.departmentService.deleteDepartment(item.id);
+      if (confirm('Are you sure') === true) {
+        this.departmentService.deleteDepartment(item.id);
+      }
     }
   }
 
