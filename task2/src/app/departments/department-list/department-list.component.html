@@ -1,0 +1,21 @@
+<div class="header">Departments</div>
+
+<div class="container">
+  <div class="row">
+      <input class="col-md-8"  placeholder="Search" #searchtext appearance="outline" (keyup)="search(searchtext)">
+    <button (click)="newDepartment()">create new department</button>
+  </div>
+  <div class="box col-md-3 text-left" style="display: inline-block" *ngFor="let department of departments">
+    <label>{{department.departmentInfo.name}}</label>
+    <fa-icon [icon]="faHospital" class="row" style="font-size:70px"></fa-icon>
+    <div class="col-xs-12 col-sm-6 example-col">
+      <select (change)="onChange($event , department)">
+        <option>Open</option>
+        <option>Edit</option>
+        <option>Delete</option>
+      </select>
+    </div>
+  </div>
+
+
+</div>

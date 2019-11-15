@@ -1,0 +1,45 @@
+<div class="header">Departments</div>
+<div class="container">
+  <div style="border:1px solid grey; text-align: center;">
+    <label>Department Info</label>
+    <div>
+      <label>Name:</label>
+    </div>
+    <div>
+      <input [(ngModel)]="departmentInfo.name">
+    </div>
+    <div>
+      <label>API Key:</label>
+    </div>
+    <div>
+      <input [(ngModel)]="departmentInfo.apiKey">
+    </div>
+  </div>
+  <div style="border:1px solid grey; text-align: center;">
+    <label>Department Contact Person</label>
+    <div>
+      <label>Name:</label>
+    </div>
+    <div>
+      <input [(ngModel)]="departmentContactPerson.name">
+    </div>
+    <div>
+      <label>Email:</label>
+    </div>
+    <div>
+      <input [(ngModel)]="departmentContactPerson.email">
+    </div>
+    <div>
+      <label>Phone:</label>
+    </div>
+    <div>
+      <input [(ngModel)]="departmentContactPerson.phone">
+    </div>
+
+
+  </div>
+  <button (click)="saveDepartment()">{{id?'Edit':'Create'}}</button>
+  <button (click)="back()">Back to List</button>
+
+
+</div>
