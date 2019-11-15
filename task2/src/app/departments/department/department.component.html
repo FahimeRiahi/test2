@@ -1,45 +1,57 @@
 <div class="header">Departments</div>
 <div class="container">
-  <div style="border:1px solid grey; text-align: center;">
-    <label>Department Info</label>
-    <div>
-      <label>Name:</label>
+  <div style="border:1px solid grey; text-align: center; padding: 20px">
+    <div class="row"><label class="float-left">Department Info</label></div>
+    <div class="row">
+      <div class="col-md-4 text-right">
+        <label>Name:</label>
+      </div>
+      <div class="col-md-8 text-left">
+        <input [(ngModel)]="departmentInfo.name">
+      </div>
     </div>
-    <div>
-      <input [(ngModel)]="departmentInfo.name">
-    </div>
-    <div>
+    <div class="row">
+      <div class="col-md-4 text-right">
       <label>API Key:</label>
     </div>
-    <div>
+      <div class="col-md-8 text-left">
       <input [(ngModel)]="departmentInfo.apiKey">
     </div>
+    </div>
   </div>
-  <div style="border:1px solid grey; text-align: center;">
-    <label>Department Contact Person</label>
-    <div>
+  <div style="border:1px solid grey; text-align: center; padding: 20px">
+    <div class="row"><label class="float-left">Department Contact Person</label></div>
+    <div class="row">
+      <div class="col-md-4 text-right">
       <label>Name:</label>
     </div>
-    <div>
+    <div class="col-md-8 text-left">
       <input [(ngModel)]="departmentContactPerson.name">
     </div>
-    <div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-right">
       <label>Email:</label>
     </div>
-    <div>
+    <div class="col-md-8 text-left">
       <input [(ngModel)]="departmentContactPerson.email">
     </div>
-    <div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 text-right">
       <label>Phone:</label>
     </div>
-    <div>
+    <div class="col-md-8 text-left">
       <input [(ngModel)]="departmentContactPerson.phone">
+    </div>
     </div>
 
 
   </div>
-  <button (click)="saveDepartment()">{{id?'Edit':'Create'}}</button>
-  <button (click)="back()">Back to List</button>
+  <div class="row offset-md-4" style="padding: 10px">
+    <button style="margin-right: 10px" (click)="saveDepartment()">{{id ? 'Edit' : 'Create'}}</button>
+    <button  (click)="back()">Back to List</button>
+  </div>
 
 
 </div>

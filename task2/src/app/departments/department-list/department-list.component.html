@@ -5,11 +5,11 @@
       <input class="col-md-8"  placeholder="Search" #searchtext appearance="outline" (keyup)="search(searchtext)">
     <button (click)="newDepartment()">create new department</button>
   </div>
-  <div class="box col-md-3 text-left" style="display: inline-block" *ngFor="let department of departments">
+  <div class="box col-md-2 text-left" style="display: inline-block; border:1px solid grey;padding: 5px;margin: 20px; border-radius: 5px " *ngFor="let department of departments">
     <label>{{department.departmentInfo.name}}</label>
-    <fa-icon [icon]="faHospital" class="row" style="font-size:70px"></fa-icon>
-    <div class="col-xs-12 col-sm-6 example-col">
-      <select (change)="onChange($event , department)">
+    <fa-icon [icon]="faHospital" class="row" style="font-size:60px;padding-left: 40%"></fa-icon>
+    <div class="col-md-12" style="margin: 5px;">
+      <select style="border-radius: 5px;width: 100%;background-color: forestgreen;font-size: 14px;" (change)="onChange($event , department)">
         <option>Open</option>
         <option>Edit</option>
         <option>Delete</option>

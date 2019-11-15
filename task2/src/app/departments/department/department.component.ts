@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Department, DepartmentContactPerson, DepartmentInfo} from '../../Models/department'
-import {DepartmentService} from "../../services/department.service";
-import {ActivatedRoute, Router} from "@angular/router";
+import {Department, DepartmentContactPerson, DepartmentInfo} from '../../Models/department';
+import {DepartmentService} from '../../services/department.service';
+import {ActivatedRoute, Router} from '@angular/router';
 
 @Component({
   selector: 'app-department',
@@ -28,9 +28,11 @@ export class DepartmentComponent implements OnInit {
 
       // In a real app: dispatch action to load the details here.
     });
-    this.department = this.departmentService.getDepartmentById(this.id);
-    this.departmentContactPerson = this.department.departmentContactPerson;
-    this.departmentInfo = this.department.departmentInfo;
+    if (this.id) {
+      this.department = this.departmentService.getDepartmentById(this.id);
+      this.departmentContactPerson = this.department.departmentContactPerson;
+      this.departmentInfo = this.department.departmentInfo;
+    }
   }
 
   saveDepartment() {
