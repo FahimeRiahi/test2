@@ -32,8 +32,15 @@ export class DepartmentListComponent implements OnInit {
       this.departmentService.deleteDepartment(item.id);
     }
   }
+
   public search(searchtext: any) {
-   // this.departments =  this.departmentService.search(searchtext.value);
+    if (searchtext.value) {
+      this.departments = this.departmentService.search(searchtext.value);
+
+    } else {
+      this.departments = this.departmentService.getDepartments() as Department[];
+
+    }
   }
 
 }

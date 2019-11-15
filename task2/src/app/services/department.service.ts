@@ -30,7 +30,6 @@ export class DepartmentService {
   }
 
   public getDepartmentById(id: any) {
-    debugger;
     return this.departments.find(x => x.id === id);
   }
 

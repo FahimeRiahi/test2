@@ -22,7 +22,6 @@ export class DepartmentComponent implements OnInit {
 
 
   ngOnInit() {
-    debugger;
     this.index = this.departmentService.getDepartments().length;
     this.sub = this.route.params.subscribe(params => {
       this.id = +params['id']; // (+) converts string 'id' to a number
