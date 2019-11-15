@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { ToasterConfig } from 'angular2-toaster';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +7,5 @@ import { ToasterConfig } from 'angular2-toaster';
 })
 export class AppComponent {
   title = 'task2';
-  config: ToasterConfig = new ToasterConfig({ animation: 'fade', positionClass: 'toast-bottom-left', mouseoverTimerStop: true });
 
 }

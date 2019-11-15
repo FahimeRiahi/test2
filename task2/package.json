@@ -31,7 +31,8 @@
     "zone.js": "~0.9.1",
     "@progress/kendo-theme-default": "latest",
     "@progress/kendo-angular-intl": "^2.0.0",
-    "@progress/kendo-drawing": "^1.5.12"
+    "@progress/kendo-drawing": "^1.5.12",
+    "@fortawesome/angular-fontawesome": "0.5.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
